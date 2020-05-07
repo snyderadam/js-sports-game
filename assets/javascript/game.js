@@ -1,5 +1,5 @@
 
-
+//STILL WORKING ON COUNTER RESETS
 
 let teamOneShotsNum = document.querySelector("#teamone-numshots");
 let teamOneShotbutton = document.querySelector("#teamone-shoot-button");
