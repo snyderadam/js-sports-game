@@ -1,5 +1,4 @@
 
-//Team Shoot buttons and Shot counts
 
 
 let teamOneShotsNum = document.querySelector("#teamone-numshots");
@@ -28,24 +27,25 @@ teamTwoShotbutton.addEventListener("click", function (){
     let NewTeamTwoTally = Number(teamTwoShotsNum.innerHTML) + 1;
     teamTwoShotsNum.innerHTML = NewTeamTwoTally;
 
-    let teamTwoGoals = document.querySelector(" #teamtwo-numgoals");
+    let teamTwoGoals = document.querySelector("#teamtwo-numgoals");
    
     if (NewTeamTwoTally === Math.floor(Math.random() * 10)+1){
-        let teamTwoGoalTally = Number(teamTwoGoals.innerHTML) + 1
+        let teamTwoGoalTally = Number(teamTwoGoals.innerHTML) + 1;
         teamTwoGoals.innerHTML = teamTwoGoalTally;}
-
 
         
 
 })
 
-let resetButton = document.querySelector(" #reset-button")
-let resetNumber = document.querySelector(" #num-resets")
 
-resetButton.addEventListener("click", function (){
+let resetButton = document.querySelector("#reset-button")
+let resetNumber = document.querySelector("#num-resets")
+
+ resetButton.addEventListener("click", function (){
     let newResetNumber = Number(resetNumber.innerHTML) + 1
     resetNumber.innerHTML = newResetNumber
-    teamTwoGoalTally = Number(teamTwoGoals.innerHTML)
-    teamTwoShotsNum = Number(teamTwoShotsNum.innerHTML)
-
+    teamTwoShotsNum.innerHTML = 0;
+    teamTwoGoals.innerHTML = 0;
+    teamOneShotsNum.innerHTML = 0;
+    teamOneGoals.innerHTML = 0;
 })
